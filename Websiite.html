@@ -46,73 +46,39 @@
 </html>
 <style>
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+   pre {
+    background-color: #000; /* Black background */
+    color: #c0c0c0; /* Light grey text for readability */
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+code {
+    color: #d4a5e5; /* Purple text color */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for inline code */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Optional: Add syntax highlighting if using a library */
+.token.keyword {
+    color: #d4a5e5; /* Purple for keywords */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.token.string {
+    color: #f5a623; /* Optional: Color for strings, you can change this as needed */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.token.comment {
+    color: #7a7a7a; /* Optional: Color for comments, you can change this as needed */
 }
 
-main {
-    padding: 20px;
+.token.function {
+    color: #a0e000; /* Optional: Color for functions, you can change this as needed */
 }
-
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-form {
-    display: grid;
-    gap: 10px;
-}
-
-form label {
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-form button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 3. JavaScript (script.js)
 Create a script.js file to add functionality. Here’s a basic example that handles form submission.
