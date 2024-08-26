@@ -3,70 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is a website</title>
+    <title>My Simple Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>My Simple Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Hello this is my website</h1>
-            <p>Also this website dosent do anything to benfit you</p>
-            <a href="#services" class="btn">Learn More</a>
-        </div>
-    </sectctive 
-
     <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>This was made buy a verry autictic person.</p>
+        <section id="home">
+            <div class="container">
+                <h2>Welcome to Our Website</h2>
+                <p>We are glad to have you here. Explore our services and get in touch with us.</p>
+            </div>
         </section>
 
-        <section id="services" class="card-container">
-            <div class="card">
-                <h3>Service One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We are a company dedicated to providing the best services to our customers. Learn more about our mission and values.</p>
             </div>
-            <div class="card">
-                <h3>Service Two</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="card">
-                <h3>Service Three</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>We offer a variety of services to meet your needs. Check out what we have to offer!</p>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; This is my website</p>
+        <div class="container">
+            <p>&copy; 2024 My Simple Website. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
 <style>
@@ -77,15 +74,15 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 header {
-    background: #111;
-    color: #fff;
-    padding: 1rem;
+    background: #4CAF50; /* Green background */
+    color: white;
+    padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -93,70 +90,46 @@ header {
     z-index: 1000;
 }
 
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    gap: 1rem;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f0f0f0;
-}
-
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #ff4081;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #e0336c;
+    text-decoration: underline;
 }
 
 main {
-    padding: 2rem;
-    margin-top: 80px; /* Adjust for header height */
+    margin-top: 70px; /* Adjust for header height */
+    padding: 1rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 section {
@@ -165,38 +138,12 @@ section {
 
 h2 {
     margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #333;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.card h3 {
-    margin-bottom: 1rem;
-    color: #ff4081;
+    color: #4CAF50;
 }
 
 form {
     display: grid;
     gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 form label {
@@ -205,29 +152,26 @@ form label {
 
 form input, form textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
 }
 
 form button {
-    padding: 0.75rem 1.5rem;
-    background: #ff4081;
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
 }
 
 form button:hover {
-    background: #e0336c;
+    background: #45a049;
 }
 
 footer {
-    background: #111;
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -235,21 +179,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
+</style>
